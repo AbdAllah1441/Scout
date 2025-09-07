@@ -1,0 +1,267 @@
+.features {
+  background: #0f1115;
+  color: white;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  border-bottom: 1px solid #333;
+  background-image: url(../images/Image\ [bg-bento].png),
+    url(../images/Image\ [bg-bento-stars].png);
+  background-size: 100% 100%, 100% 100%;
+  padding: 120px 20px;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+/* Vertical borders for larger screens */
+.features::before,
+.features::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #333;
+  display: none;
+}
+
+.feature-card {
+  border: 1px solid #2a2d34;
+  border-radius: 16px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-align: center;
+  background: rgba(42, 45, 52, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.feature-icon {
+  margin-bottom: 20px;
+  color: #7877c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(120, 119, 198, 0.1);
+  border: 1px solid rgba(120, 119, 198, 0.2);
+}
+
+.feature-card:hover {
+  border-color: #7877c6;
+  box-shadow: 0 8px 32px rgba(120, 119, 198, 0.15);
+  transform: translateY(-4px);
+  background: rgba(120, 119, 198, 0.05);
+}
+
+.feature-card:hover .feature-icon {
+  color: #9d9bf0;
+  background: rgba(120, 119, 198, 0.2);
+  border-color: rgba(120, 119, 198, 0.4);
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #bbb;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.feature-card.wide {
+  grid-column: span 2;
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+  .features {
+    padding: 120px 60px;
+  }
+
+  .features::before,
+  .features::after {
+    display: block;
+  }
+
+  .features::before {
+    left: 150px;
+  }
+
+  .features::after {
+    right: 150px;
+  }
+
+  .feature-card {
+    padding: 60px 30px;
+  }
+}
+
+/* Tablet Landscape (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .features {
+    padding: 100px 40px;
+  }
+
+  .features-container {
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 40px 24px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .features {
+    padding: 80px 32px;
+  }
+
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .feature-card.wide {
+    grid-column: span 1;
+  }
+
+  .feature-card {
+    padding: 36px 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* Mobile Landscape (640px - 767px) */
+@media (max-width: 767px) and (min-width: 640px) {
+  .features {
+    padding: 60px 24px;
+  }
+
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .feature-card.wide {
+    grid-column: span 2;
+  }
+
+  .feature-card {
+    padding: 32px 18px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  .feature-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Mobile Portrait (< 640px) */
+@media (max-width: 639px) {
+  .features {
+    padding: 50px 16px;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-card.wide {
+    grid-column: span 1;
+  }
+
+  .feature-card {
+    padding: 28px 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+}
+
+/* Extra Small Mobile (< 480px) */
+@media (max-width: 479px) {
+  .features {
+    padding: 40px 12px;
+  }
+
+  .feature-card {
+    padding: 24px 16px;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+}
