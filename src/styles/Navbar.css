@@ -156,6 +156,11 @@
   font-size: 1.1rem;
 }
 
+@media (max-width: 1400px) {
+  .navbar {
+    padding: 25px 180px;
+  }
+}
 /* Tablet */
 @media (max-width: 1200px) {
   .navbar {

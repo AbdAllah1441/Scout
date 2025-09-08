@@ -177,3 +177,16 @@
       calc(100% - 300px) 0, center, center;
   }
 }
+
+@media (max-height: 800px) {
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 768px) {
+  .hero {
+    padding-top: 30px;
+  }
+}
