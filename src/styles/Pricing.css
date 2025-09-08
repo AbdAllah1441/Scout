@@ -44,19 +44,23 @@
 }
 
 .plan-card {
-  background: #18181b;
-  border: 1px solid #2a2d34;
+  background: rgba(24, 24, 27, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(42, 45, 52, 0.6);
   border-radius: 16px;
   padding: 2.5rem 2rem;
   text-align: left;
   transition: all 0.3s ease;
   height: fit-content;
   position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .plan-card:hover {
-  border-color: #444;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  background: rgba(24, 24, 27, 0.6);
+  border-color: rgba(68, 68, 68, 0.8);
+  box-shadow: 0 16px 48px rgba(255, 255, 255, 0.05);
   transform: translateY(-4px);
 }
 
@@ -122,37 +126,65 @@
   border-radius: 20px;
   margin-bottom: 1rem;
   width: fit-content;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .badge.green {
-  background: #064e3b;
+  background: rgba(6, 78, 59, 0.6);
   color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.2);
 }
 
 .badge.purple {
-  background: #312e81;
+  background: rgba(49, 46, 129, 0.6);
   color: #a78bfa;
+  border: 1px solid rgba(167, 139, 250, 0.2);
 }
 
 .badge.blue {
-  background: #1e3a8a;
+  background: rgba(30, 58, 138, 0.6);
   color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.2);
 }
 
 .badge.pink {
-  background: #831843;
+  background: rgba(131, 24, 67, 0.6);
   color: #f472b6;
+  border: 1px solid rgba(244, 114, 182, 0.2);
   align-self: center;
 }
 
 /* Popular Plan Highlight */
 .plan-card.popular {
-  border: 2px solid #a78bfa;
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+  background: rgba(24, 24, 27, 0.5);
+  border: 2px solid rgba(167, 139, 250, 0.7);
+  box-shadow: 0 16px 48px rgba(167, 139, 250, 0.15);
   transform: scale(1.02);
+  position: relative;
+}
+
+.plan-card.popular::before {
+  content: "MOST POPULAR";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.4);
+  z-index: 10;
 }
 
 .plan-card.popular:hover {
+  background: rgba(24, 24, 27, 0.7);
+  border-color: rgba(167, 139, 250, 0.9);
+  box-shadow: 0 20px 56px rgba(167, 139, 250, 0.2);
   transform: scale(1.02) translateY(-4px);
 }
 
@@ -168,18 +200,21 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .btn.primary {
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   color: black;
   font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn {
-  background: #2a2d34;
+  background: rgba(42, 45, 52, 0.6);
   color: white;
-  border: 1px solid #444;
+  border: 1px solid rgba(68, 68, 68, 0.5);
 }
 
 .btn:hover {
@@ -188,7 +223,7 @@
 }
 
 .btn.primary:hover {
-  background: #f0f0f0;
+  background: rgba(240, 240, 240, 0.95);
 }
 
 /* Support Section */
@@ -198,12 +233,14 @@
   gap: 0;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .support-card {
-  background: linear-gradient(145deg, #18181b, #131317);
-  border: 1px solid #2a2d34;
+  background: rgba(24, 24, 27, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(42, 45, 52, 0.6);
   padding: 3rem 2.5rem;
   text-align: left;
   transition: all 0.3s ease;
@@ -246,8 +283,10 @@
 }
 
 .addon-card {
-  background: #18181b;
-  border: 1px solid #2a2d34;
+  background: rgba(24, 24, 27, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(42, 45, 52, 0.6);
   border-radius: 0 16px 16px 0;
   padding: 3rem 2rem;
   text-align: center;
@@ -335,7 +374,7 @@
 
   .support-card {
     border-radius: 16px 16px 0 0;
-    border-right: 1px solid #2a2d34;
+    border-right: 1px solid rgba(42, 45, 52, 0.4);
     border-bottom: none;
     padding: 2.5rem 2rem;
   }

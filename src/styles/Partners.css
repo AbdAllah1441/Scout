@@ -54,12 +54,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 1rem;
+  padding: 3rem 3rem;
   border-right: 1px solid #333;
-  min-width: 0;
   flex: 1;
   min-width: 200px;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .partner-item:hover {
@@ -84,7 +84,7 @@
 }
 
 .partner-item span {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 500;
   color: #e0e0e0;
   margin-left: 0.75rem;
@@ -95,6 +95,10 @@
 @media (min-width: 1400px) {
   .partners {
     padding: 100px 300px 0;
+  }
+
+  .partners-container {
+    max-width: none; /* Remove max-width constraint */
   }
 
   .partners::before,
@@ -139,7 +143,6 @@
   }
 
   .partner-item {
-    padding: 20px 30px;
     min-width: 220px;
   }
 
@@ -158,12 +161,13 @@
   }
 
   .partner-item span {
-    font-size: 1.2rem;
     margin-left: 12px;
   }
 
   .partners-text {
     margin: 100px 0;
+    max-width: none; /* Remove max-width constraint */
+    text-align: center; /* Ensure text is centered */
   }
 }
 

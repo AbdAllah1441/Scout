@@ -10,7 +10,6 @@ export default function Pricing() {
           Whether you are just starting or require massive scale, we have a
           solution.
         </p>
-
         {/* Pricing Plans */}
         <div className="pricing-plans">
           <div className="plan-card">
@@ -29,7 +28,6 @@ export default function Pricing() {
               <li>Community Support (Discord)</li>
             </ul>
           </div>
-
           <div className="plan-card popular">
             <span className="badge purple">Pro</span>
             <h3>$50</h3>
@@ -44,7 +42,6 @@ export default function Pricing() {
               <li>Community & Email Support</li>
             </ul>
           </div>
-
           <div className="plan-card">
             <span className="badge blue">Enterprise</span>
             <h3>Custom</h3>
@@ -60,7 +57,6 @@ export default function Pricing() {
             </ul>
           </div>
         </div>
-
         {/* Dedicated Support */}
         <div className="support-section">
           <div className="support-card">
@@ -84,7 +80,6 @@ export default function Pricing() {
               </div>
             </div>
           </div>
-
           <div className="addon-card">
             <span className="badge pink">Add On</span>
             <h3>
